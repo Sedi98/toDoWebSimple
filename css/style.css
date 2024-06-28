@@ -1,0 +1,187 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(63, 94, 251);
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(252, 70, 107, 1);
+}
+
+.body {
+  background-color: rgb(241, 241, 241);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient-animation 10s infinite alternate;
+  transition: all 0.5s ease-in-out;
+}
+
+.container {
+  width: 70%;
+  height: 80%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.cntHeader{
+  text-align: center;
+  font-size: 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  color: rgb(63, 94, 251);
+}
+
+.cntHeader span{
+    text-align: center;
+    font-size: 50px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    color: rgba(252, 70, 107, 1) ;
+  }
+
+.inputDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #e2e2e2;
+}
+
+.iconBtnDiv {
+  display: flex;
+  gap: 10px;
+}
+
+.iconBtnDiv i {
+  cursor: pointer;
+  color: rgb(63, 94, 251);
+  font-size: 32px;
+  transition: color 0.3s ease-in-out;
+}
+
+.iconBtnDiv i:nth-child(odd) {
+  cursor: pointer;
+
+  color: rgba(252, 70, 107, 1);
+  
+  transition: color 0.3s ease-in-out;
+}
+
+.iconBtnDiv i:nth-child(odd):hover {
+  cursor: pointer;
+  color: rgb(63, 94, 251);
+  
+  transition: color 0.3s ease-in-out;
+}
+
+.iconBtnDiv i:hover {
+  color: rgba(252, 70, 107, 1);
+}
+
+.textInput {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background-color: #e2e2e2;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+.lists {
+  height: 50%;
+  width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: rgb(63, 94, 251);
+  font-family: "Roboto", sans-serif;
+}
+
+.header_text {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 0px;
+}
+
+.listIcons {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  font-size: 28px;
+  color: black;
+}
+
+.listIcons i {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.listIcons i:hover {
+  color: rgb(63, 94, 251);
+}
+
+
+.footer_text {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 0px;
+}

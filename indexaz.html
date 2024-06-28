@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+
+    <title>Sadə etməli olduqlarım siyahısı tətbiqi</title>
+  </head>
+  <body class="body">
+    <div class="container">
+      <h1 class="cntHeader">TO <span>DO</span></h1>
+      <div class="inputDiv">
+        <input class="textInput" placeholder="İstədiyini yaz" type="text" name="" id="textInput" />
+        <div class="iconBtnDiv">
+          <i id="clearBtn"  class="bx bx-x-circle"></i>
+          <i id="addBtn" class="bx bx-plus-circle"></i>
+        </div>
+      </div>
+      <div class="list">
+        <div>
+          <h2 class="roboto-bold header_text">Gözləyən tapşırıqlar</h2>
+          <hr />
+        </div>
+
+        <div class="pendingList lists">
+          
+        </div>
+
+        <div>
+          <h2 class="roboto-bold header_text">Tamamlanmış tapşırıqlar</h2>
+          <hr />
+        </div>
+        <div class="completedList lists"></div>
+      </div>
+      <div class="footer">
+        <p class="roboto-regular-italic footer_text">© 2024<span id="year">-Now.</span> Made with 💙 by Sadi Mammadov.All Rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
