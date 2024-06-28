@@ -7,16 +7,21 @@ let moveToCompletedBtn = document.querySelector("#moveToCompletedBtn");
 let deletePendingBtn = document.querySelector("#deletePendingBtn");
 let deleteCompletedBtn = document.querySelector("#deleteCompletedBtn");
 
+let langText = document.querySelector(".langText");
+
 let yearText = document.querySelector("#year");
+
+let cntHeader = document.querySelector(".cntHeader");
 
 // get data from local storage
 let PendingStorage = localStorage.getItem("pending");
 let PendingData = JSON.parse(PendingStorage) || [];
-// 
+//
 let CompletedStorage = localStorage.getItem("completed");
 let CompletedData = JSON.parse(CompletedStorage) || [];
 
-// this functions will be called when page loads 
+// this functions will be called when page loads
+WelcomeMessage();
 ShowPending();
 ShowCompleted();
 checkYear();
@@ -66,8 +71,7 @@ function removeFromCompleted(index) {
     array.splice(index, 1);
     setToCompletedStorage(array);
     ShowCompleted();
-  }
-  else {
+  } else {
     return;
   }
 }
@@ -110,14 +114,35 @@ function ShowCompleted() {
   });
 }
 
-
-
 function checkYear() {
   let year = new Date().getFullYear();
   if (year === 2024) {
-    yearText.innerHTML ='';
+    yearText.innerHTML = "";
   } else {
     yearText.innerHTML = year;
+  }
+}
+
+function WelcomeMessage() {
+  let hour = new Date().getHours();
+  let text = langText.innerHTML;
+
+  if (text === "AZ") {
+    if (hour < 12) {
+      cntHeader.innerHTML = "<span>Good</span>  Morning";
+    } else if (hour < 18) {
+      cntHeader.innerHTML = "<span>Good</span> Afternoon";
+    } else {
+      cntHeader.innerHTML = "<span>Good</span> Evening";
+    }
+  } else if (text === "EN") {
+    if (hour < 12) {
+      cntHeader.innerHTML = "<span>Sabahınız</span>  Xeyir";
+    } else if (hour < 18) {
+      cntHeader.innerHTML = "<span>Günortanız</span>  Xeyir";
+    } else {
+      cntHeader.innerHTML = " <span>Axşamınız</span> Xeyir";
+    }
   }
 }
 
